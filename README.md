@@ -35,8 +35,8 @@ The `map()` method creates a new array populated with the results of calling a p
 const numbers = [1, 2, 3];
 
 const numbersPerIndexAndLength = numbers.map((number, index, numbers) => {
-  const numberPerIndexAndLength = number * index * numbers.length;
-  return numberPerIndexAndLength;
+    const numberPerIndexAndLength = number * index * numbers.length;
+    return numberPerIndexAndLength;
 });
 
 console.log(numbersPerIndexAndLength); // [ 0, 6, 18 ]
@@ -61,8 +61,8 @@ The `filter()` method creates a shallow copy of a portion of a given array, filt
 const numbers = [0, 2, 4, 8, 10, 12, 14, 16, 10, 20];
 
 const isGreaterThanTen = numbers.filter((number) => {
-  const isGreater = number > 10;
-  return isGreater;
+    const isGreater = number > 10;
+    return isGreater;
 });
 
 console.log(isGreaterThanTen); // [ 12, 14, 16, 10, 20 ]
@@ -88,8 +88,8 @@ The `reduce()` method executes a user-supplied "reducer" callback function on ea
 const numbers = [0, 2, 4, 8, 10, 12, 14, 16, 10, 20];
 
 const getTotal = numbers.reduce((acc, number) => {
-  const currentTotal = acc + number;
-  return currentTotal;
+    const currentTotal = acc + number;
+    return currentTotal;
 }, 0);
 
 console.log(getTotal); // 96
