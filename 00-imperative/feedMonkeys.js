@@ -20,10 +20,10 @@ export default function feedMonkeys(monkeysList, fruit) {
         return [];
     }
 
-    let newMonkeyList = [];
-    const MONKEY_LIST_LENGTH = monkeysList.length;
+    const newMonkeyList = [];
+    const monketListLenght = monkeysList.length;
 
-    for (let index = 0; index < MONKEY_LIST_LENGTH; index++) {
+    for (let index = 0; index < monketListLenght; index++) {
         const monkey = monkeysList[index];
         const newMonkey = `${monkey}${fruit}`;
 
