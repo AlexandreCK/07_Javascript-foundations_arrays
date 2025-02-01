@@ -15,3 +15,12 @@
  * @param {string} fruit - The type of fruit to feed the monkeys.
  * @returns {string[]} An array of strings where each string represents a monkey being fed with the specified fruit.
  */
+export default function feedMonkeys(monkeysList, fruit) {
+    const isEmoji = /^\p{Emoji}+$/u.test(fruit);
+
+    if (!fruit || !isEmoji || typeof fruit !== 'string') {
+        return [];
+    }
+
+    return monkeysList.map((monkey) => `${monkey}${fruit}`);
+}

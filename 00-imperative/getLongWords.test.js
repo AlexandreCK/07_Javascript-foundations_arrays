@@ -1,20 +1,62 @@
-const LANGUAGES = ["Java", "C++", "JavaScript", "C#", "TypeScript"];
-const BEATLES = ["John", "George", "Paul", "Ringo"];
-const SHORT_WORDS = ["a", "bb", "ccc", "dddd"];
-const ALL_LONG_WORDS = ["JavaScript", "TypeScript", "Python"];
-const EMPTY_ARRAY = [];
-const MIXED_LENGTH_WORDS = ["short", "tiny", "adequate", "sufficient"];
+import { describe, expect, it } from 'vitest';
+import getLongWords from './getLongWords';
 
-describe("getLongWords", () => {
-  it.todo("should return long words from LANGUAGES array");
+describe('getLongWords', () => {
+    it('should return long words from LANGUAGES array', () => {
+        const LANGUAGES = ['Java', 'C++', 'JavaScript', 'C#', 'TypeScript'];
 
-  it.todo("should return long words from BEATLES array");
+        const result = getLongWords(LANGUAGES);
 
-  it.todo("should return an empty array if no words are long enough");
+        expect(result).toEqual(['JavaScript', 'TypeScript']);
+    });
 
-  it.todo("should return the same array if all words are long enough");
+    it('should return long words from BEATLES array', () => {
+        const BEATLES = ['John', 'George', 'Paul', 'Ringo'];
 
-  it.todo("should handle an empty input array");
+        const result = getLongWords(BEATLES);
 
-  it.todo("should handle an array with mixed length words");
+        expect(result).toEqual(['George', 'Ringo']);
+    });
+
+    it('should return an empty array if no words are long enough', () => {
+        const SHORT_WORDS = ['a', 'bb', 'ccc', 'dddd'];
+
+        const result = getLongWords(SHORT_WORDS);
+
+        expect(result).toEqual([]);
+    });
+
+    it('should return the same array if all words are long enough', () => {
+        const LONG_WORDS = [
+            'aaaaaaaa',
+            'bbbbbbbbbb',
+            'ccccccccccc',
+            'dddddddddd',
+        ];
+
+        const result = getLongWords(LONG_WORDS);
+
+        expect(result).toEqual([
+            'aaaaaaaa',
+            'bbbbbbbbbb',
+            'ccccccccccc',
+            'dddddddddd',
+        ]);
+    });
+
+    it('should handle an empty input array', () => {
+        const EMPTY_ARRAY = [];
+
+        const result = getLongWords(EMPTY_ARRAY);
+
+        expect(result).toEqual([]);
+    });
+
+    it('should handle an array with mixed length word', () => {
+        const MIXED_LENGTH_WORDS = ['short', 'tiny', 'adequate', 'sufficient'];
+
+        const result = getLongWords(MIXED_LENGTH_WORDS);
+
+        expect(result).toEqual(['short', 'adequate', 'sufficient']);
+    });
 });

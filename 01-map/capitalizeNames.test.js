@@ -1,20 +1,57 @@
-const NAMES = ["john", "JACOB", "jinGleHeimer", "schmidt"];
-const EMPTY_NAMES_LIST = [];
-const CAPITALIZED_NAMES = ["John", "Jacob", "Jingleheimer", "Schmidt"];
-const UPPERCASED_NAMES = ["JOHN", "JACOB", "JINGLEHEIMER", "SCHMIDT"];
-const LOWERCASED_NAMES = ["john", "jacob", "jingleheimer", "schmidt"];
-const MIXED_CAPITALIZED_NAMES = ["jOhN", "JaCoB", "jInGlEhEiMeR", "sChMiDt"];
+import { describe, expect, it } from 'vitest';
+import capitalizeNames from './capitalizeNames';
 
-describe("capitalizeMates", () => {
-  it.todo("should capitalize all names in the array");
+describe('capitalizeNames', () => {
+    it('should capitalize all names in the array', () => {
+        const NAMES = ['john', 'JACOB', 'jinGleHeimer', 'schmidt'];
 
-  it.todo("should handle an empty array");
+        const result = capitalizeNames(NAMES);
 
-  it.todo("should handle names that are already capitalized correctly");
+        expect(result).toEqual(['John', 'Jacob', 'Jingleheimer', 'Schmidt']);
+    });
 
-  it.todo("should handle names that are all uppercase");
+    it('should handle an empty array', () => {
+        const EMPTY_NAMES_LIST = [];
 
-  it.todo("should handle names that are all lowercase");
+        const result = capitalizeNames(EMPTY_NAMES_LIST);
 
-  it.todo("should handle names with mixed casing");
+        expect(result).toEqual([]);
+    });
+
+    it('should handle names that are already capitalized correctly', () => {
+        const CAPITALIZED_NAMES = ['John', 'Jacob', 'Jingleheimer', 'Schmidt'];
+
+        const result = capitalizeNames(CAPITALIZED_NAMES);
+
+        expect(result).toEqual(['John', 'Jacob', 'Jingleheimer', 'Schmidt']);
+    });
+
+    it('should handle names that are all uppercase', () => {
+        const UPPERCASED_NAMES = ['JOHN', 'JACOB', 'JINGLEHEIMER', 'SCHMIDT'];
+
+        const result = capitalizeNames(UPPERCASED_NAMES);
+
+        expect(result).toEqual(['John', 'Jacob', 'Jingleheimer', 'Schmidt']);
+    });
+
+    it('should handle names that are all lowercase', () => {
+        const LOWERCASED_NAMES = ['john', 'jacob', 'jingleheimer', 'schmidt'];
+
+        const result = capitalizeNames(LOWERCASED_NAMES);
+
+        expect(result).toEqual(['John', 'Jacob', 'Jingleheimer', 'Schmidt']);
+    });
+
+    it('should handle names with mixed casing', () => {
+        const MIXED_CAPITALIZED_NAMES = [
+            'jOhN',
+            'JaCoB',
+            'jInGlEhEiMeR',
+            'sChMiDt',
+        ];
+
+        const result = capitalizeNames(MIXED_CAPITALIZED_NAMES);
+
+        expect(result).toEqual(['John', 'Jacob', 'Jingleheimer', 'Schmidt']);
+    });
 });
