@@ -8,9 +8,14 @@
  * expected BEATLES: ["George", "Ringo"];
  */
 
+const MIN_WORD_LENGTH = 5;
+
 /**
  * Filters an array of words and returns only the words that have a length of 5 or more characters.
  *
  * @param {string[]} wordsList - An array of words to be filtered.
  * @returns {string[]} An array containing words that are 5 or more characters long.
  */
+export default function getLongWords(wordsList) {
+    return wordsList.filter((word) => word.length >= MIN_WORD_LENGTH);
+}

@@ -1,24 +1,95 @@
-const EMPTY_NUMBERS_LIST = [];
-const POSITIVE_NUMBERS_LIST = [1, 2, 3, 4, 5];
-const NEGATIVE_NUMBERS_LIST = [-1, -2, -3, -4, -5];
-const MIXED_NUMBERS_LIST = [1, -2, 3, -4, 5];
+import { describe, expect, it } from 'vitest';
+import sumNumbersFromInitialValue from './sumNumbersFromInitialValue';
 
-const initialAccumulatedValueAsZero = 0;
-const initialAccumulatedValueAsTen = 10;
-const initialAccumulatedValueAsOneHundred = 100;
+describe('sumNumbersFromInitialValue', () => {
+    it('should return the correct sum with initial value 0', () => {
+        const POSITIVE_NUMBERS_LIST = [1, 2, 3, 4, 5];
 
-describe("sumNumbersFromInitialValue", () => {
-  it.todo("should return the correct sum with initial value 0");
+        const initialAccumulatedValueAsZero = 0;
 
-  it.todo("should return the correct sum with initial value 10");
+        const result = sumNumbersFromInitialValue(
+            POSITIVE_NUMBERS_LIST,
+            initialAccumulatedValueAsZero,
+        );
 
-  it.todo("should return the initial value if the list is empty");
+        expect(result).toEqual(15);
+    });
 
-  it.todo("should handle negative numbers in the list");
+    it('should return the correct sum with initial value 10', () => {
+        const POSITIVE_NUMBERS_LIST = [1, 2, 3, 4, 5];
 
-  it.todo("should handle a mix of positive and negative numbers");
+        const initialAccumulatedValueAsTen = 10;
 
-  it.todo("should handle an initial value of 0");
+        const result = sumNumbersFromInitialValue(
+            POSITIVE_NUMBERS_LIST,
+            initialAccumulatedValueAsTen,
+        );
 
-  it.todo("should handle an initial value of 100");
+        expect(result).toEqual(25);
+    });
+
+    it('should return the initial value if the list is empty', () => {
+        const EMPTY_NUMBERS_LIST = [];
+
+        const initialAccumulatedValueAsZero = 0;
+
+        const result = sumNumbersFromInitialValue(
+            EMPTY_NUMBERS_LIST,
+            initialAccumulatedValueAsZero,
+        );
+
+        expect(result).toEqual(0);
+    });
+
+    it('should handle negative numbers in the list', () => {
+        const NEGATIVE_NUMBERS_LIST = [-1, -2, -3, -4, -5];
+
+        const initialAccumulatedValueAsZero = 0;
+
+        const result = sumNumbersFromInitialValue(
+            NEGATIVE_NUMBERS_LIST,
+            initialAccumulatedValueAsZero,
+        );
+
+        expect(result).toEqual(-15);
+    });
+
+    it('should handle a mix of positive and negative numbers', () => {
+        const MIXED_NUMBERS_LIST = [1, -2, 3, -4, 5];
+
+        const initialAccumulatedValueAsZero = 0;
+
+        const result = sumNumbersFromInitialValue(
+            MIXED_NUMBERS_LIST,
+            initialAccumulatedValueAsZero,
+        );
+
+        expect(result).toEqual(3);
+    });
+
+    it('should handle an initial value of 0', () => {
+        const MIXED_NUMBERS_LIST = [1, -2, 3, -4, 5];
+
+        const initialAccumulatedValueAsZero = 0;
+
+        const result = sumNumbersFromInitialValue(
+            MIXED_NUMBERS_LIST,
+            initialAccumulatedValueAsZero,
+        );
+
+        expect(result).toEqual(3);
+    });
+
+    it('should handle an initial value of 100', () => {
+        const MIXED_NUMBERS_LIST = [1, -2, 3, -4, 5];
+
+        const initialAccumulatedValueAsOneHundred = 100;
+
+        const result = sumNumbersFromInitialValue(
+            MIXED_NUMBERS_LIST,
+            initialAccumulatedValueAsOneHundred,
+        );
+
+        expect(result).toEqual(103);
+    });
 });

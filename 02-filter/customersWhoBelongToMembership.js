@@ -34,3 +34,6 @@
  * @param {boolean} customers[].isMember - Indicates if the customer is a member.
  * @returns {Array} - An array of customers who are members.
  */
+export default function customersWhoBelongToMembership(customersList) {
+    return customersList.filter((customer) => customer.isMember);
+}

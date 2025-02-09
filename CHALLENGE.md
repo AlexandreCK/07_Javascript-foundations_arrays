@@ -26,15 +26,15 @@ Welcome to the **JavaScript :: Array methods**! Your task is to implement, test,
 
 1. Test-Driven Development (TDD):
 
-   - Write tests before implementing the function to ensure coverage.
+    - Write tests before implementing the function to ensure coverage.
 
 2. Assertions:
 
-   - Each function must include at least five test cases.
+    - Each function must include at least five test cases.
 
 3. Run Tests:
 
-   - Execute test script to validate your code. All tests must pass in 🟢 before submission.
+    - Execute test script to validate your code. All tests must pass in 🟢 before submission.
 
 ### Code Completion
 
@@ -42,11 +42,11 @@ For each exercise:
 
 1. Requirements Compliance:
 
-   - Ensure the function implementation meets the requirements described in the task.
+    - Ensure the function implementation meets the requirements described in the task.
 
 2. Documentation:
 
-   - Use JSDoc notation to document each function.
+    - Use JSDoc notation to document each function.
 
 ## Workflow
 
@@ -54,15 +54,15 @@ For each exercise:
 
 1. Work in `develop` branch:
 
-   - Commit changes with descriptive messages, using convention commit notation (e.g., "feat: implement factorial function").
+    - Commit changes with descriptive messages, using convention commit notation (e.g., "feat: implement factorial function").
 
 2. Create Pull Request (PR):
 
-   - Submit a PR from `develop` to `main`.
+    - Submit a PR from `develop` to `main`.
 
 3. Code review:
 
-   - Await review, feedback or approval before merging.
+    - Await review, feedback or approval before merging.
 
 ## Submission Checklist
 

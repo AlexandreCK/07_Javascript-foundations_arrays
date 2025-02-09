@@ -12,6 +12,7 @@
  *  "EN": {id: 4, enabled: false},
  * }
  */
+
 /**
  * Creates a settings object for a list of locales.
  *
@@ -20,3 +21,10 @@
  * @property {number} id - The index of the locale in the localesList array.
  * @property {boolean} enabled - A boolean indicating if the locale is enabled (true for the first locale, false for others).
  */
+export default function createLocalesSettings(localesList) {
+    return localesList.reduce((accumulator, locale, index) => {
+        accumulator[locale] = { id: index, enabled: index === 0 };
+
+        return accumulator;
+    }, {});
+}
